@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define emoji sequences with corresponding words and hints
     const gameData = [
-        { emojis: "🌞🌷", word: "sunflower", hint: "A type of flower" },
+        { emojis: "🌞🌹", word: "sunflower", hint: "A type of flower" },
         { emojis: "🔥👊", word: "firefighter", hint: "A rescue profession" },
         // More emoji sequences can be added here
     ];
