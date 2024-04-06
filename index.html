@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Word Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-md mx-auto p-12 bg-white rounded-lg shadow-2xl">
+        <div class="text-center">
+            <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
+            <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
+            <input id="wordGuess" type="text" class="text-xl border-4 border-gray-300 p-4 rounded-lg w-full mb-4" placeholder="Guess the word">
+            <button id="guessButton" class="w-full bg-blue-500 text-white p-4 rounded-lg text-xl">Guess</button>
+            <div id="result" class="mt-8 text-2xl font-semibold"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
