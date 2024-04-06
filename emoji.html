@@ -6,17 +6,24 @@
     <title>Breaker Games - Quick Icebreaker Games for Meeting</title>
     <meta name="description" content="Breaker Games offers innovative, quick-play icebreaker games designed to energize and engage teams before meetings. Perfect for remote or in-person setups, our diverse range of games fosters teamwork, stimulates creativity, and breaks down barriers in just minutes. Ideal for busy professionals, Breaker Games turns every meeting into an opportunity for team bonding and fun. Discover how our easy-to-implement games can transform your meeting dynamics and boost productivity.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        #emojiSequence {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="max-w-md mx-auto p-12 bg-white rounded-lg shadow-2xl">
-        <div class="text-center">
-            <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
-            <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
-            <input id="wordGuess" type="text" class="text-xl border-4 border-gray-300 p-4 rounded-lg w-full mb-4" placeholder="Guess the word">
-            <button id="guessButton" class="w-full bg-blue-500 text-white p-4 rounded-lg text-xl">Guess</button>
-            <div id="result" class="mt-8 text-2xl font-semibold"></div>
-            <a href="index.html" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 ease-in-out">Back to Main Page</a>
-        </div>
+<body class="bg-white flex items-center justify-center min-h-screen">
+    <div class="text-center">
+        <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
+        <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
+        <input id="wordGuess" type="text" class="text-xl border-4 border-gray-300 p-4 rounded-lg w-full mb-4" placeholder="Guess the word">
+        <button id="guessButton" class="w-full bg-blue-500 text-white p-4 rounded-lg text-xl">Guess</button>
+        <div id="result" class="mt-8 text-2xl font-semibold"></div>
+        <a href="index.html" class="inline-block mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 ease-in-out">Back to Main Page</a>
     </div>
     <script src="game.js"></script>
 </body>
