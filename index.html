@@ -8,48 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">  
-    <style>
-        body {
-            font-family: 'Single Day', sans-serif;
-            font-size: 40px; /* Increase base font size */
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        #emojiSequence {
-            animation: float 3s ease-in-out infinite;
-        }
-        #emojiHint, #result {
-            font-weight: normal;
-        }
-        #wordGuess {
-            font-weight: normal;
-            border: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        #guessButton {
-            background-color: #FFD139;
-            color: #fff;
-            border: none; /* Remove default border */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
-            transition: transform 0.3s ease; /* Smooth transformation */
-            width: 100%; /* Full width */
-            padding: 15px; /* Padding for size */
-            font-size: 1.2rem; /* Adjust font size */
-            cursor: pointer; /* Cursor pointer */
-        }
-        #guessButton:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow */
-        }
-        #guessButton:active {
-            transform: scale(0.95); /* Slightly shrink when clicked */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white flex items-center justify-center min-h-screen">
+<body class="bg-white">
+    <div class="text-center">
+        <h1 style="color: #FFD139; font-size: 6rem;">Breaker Games</h1>
+        <p style="color: black; font-size: 2rem;">Break the ice!</p>
+    </div>
+    <div class="flex items-center justify-center" style="min-height: calc(70vh - 4rem);">
     <div class="text-center">
         <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
         <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
