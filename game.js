@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameData = [
         { emojis: "🌞🌹", word: "sunflower", hint: "A type of flower" },
         { emojis: "🔥👊", word: "firefighter", hint: "A rescue profession" },
+        { emojis: "🌧️🐱🐶 ", word: "Raining Cats and Dogs", hint: "A weather forecast" },
+        { emojis: "🍕🎉 ", word: "Pizza Party", hint: "What we get at work" },
+        { emojis: "🍦☀️", word: "Ice Cream", hint: "A cold treat on a hot day" },
+        { emojis: "📚🐛", word: "Bookworm", hint: "Someone who loves to read" },
+        { emojis: "🎂🎈", word: "Birthday Party", hint: "A celebration of the day you were born" },
+        { emojis: "👻🎃", word: "Halloween", hint: "A spooky holiday" },
+        { emojis: "🎅🎄", word: "Christmas", hint: "A festive holiday in December" },
+        { emojis: "🦃🍽️", word: "Thanksgiving", hint: "A holiday for giving thanks and eating" },
+        { emojis: "🚀🌌", word: "Space Exploration", hint: "Discovering the cosmos" }
         // More emoji sequences can be added here
     ];
 
@@ -27,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     guessButton.addEventListener('click', () => {
         const userGuess = wordGuess.value.toLowerCase().trim();
-        const correctWord = gameData[currentIndex - 1].word; // Get the word for the current emoji sequence
-
+        const correctWord = gameData[currentIndex - 1].word.toLowerCase().trim(); // Trim and convert to lowercase
+    
         if (userGuess === correctWord) {
             result.textContent = "Correct! 😀";
             result.classList.remove('text-red-500');
@@ -42,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             result.classList.remove('text-green-500');
             result.classList.add('text-red-500');
         }
-
+    
         wordGuess.value = ''; // Clear the input field after each guess
     });
 

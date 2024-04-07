@@ -3,57 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Showcase</title>
+    <title>Breaker Games - Quick Icebreaker Games for Meeting</title>
+    <meta name="description" content="Breaker Games offers innovative, quick-play icebreaker games designed to energize and engage teams before meetings. Perfect for remote or in-person setups, our diverse range of games fosters teamwork, stimulates creativity, and breaks down barriers in just minutes. Ideal for busy professionals, Breaker Games turns every meeting into an opportunity for team bonding and fun. Discover how our easy-to-implement games can transform your meeting dynamics and boost productivity.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-    <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-blue-600">🎮 Breaker Games</h1>
-    </header>
-
-    <!-- Main Page -->
-    <div id="mainPage" class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-        <!-- Emoji Guessing Game Box -->
-        <!-- Emoji Guessing Game Box -->
-        <a href="emoji.html" >
-       <div class="bg-white shadow-xl rounded-lg p-6 flex flex-col items-center cursor-pointer">
-          <img src="emoji_game_image.jpg" alt="Emoji Guessing Game" class="max-h-40 w-auto mb-4">
-          <h2 class="text-2xl font-bold text-blue-500">Emoji Guessing Game</h2>
-          <p class="text-gray-700 mt-2 text-center">Test your emoji knowledge! Can you guess the word or phrase from a series of emojis?</p>
-       </div>
-      </a>
-
-        <!-- Word Scramble Game Box -->
-        <a href="emoji.html" >
-            <div class="bg-white shadow-xl rounded-lg p-6 flex flex-col items-center cursor-pointer">
-              <img src="word_scramble_image.jpg" alt="Word Scramble Game" class="max-h-40 w-auto mb-4">
-                 <h2 class="text-2xl font-bold text-green-500">Word Scramble Game</h2>
-                 <p class="text-gray-700 mt-2 text-center">Unscramble the letters to form a correct word. Great for testing your vocabulary skills!</p>
-             </div>
-        </a>
-    </div>
-
-    <!-- Emoji Guessing Game Page -->
-    <div id="emojiGame" class="hidden">
-        <!-- Content for Emoji Guessing Game -->
-        <button onclick="navigateTo('mainPage')" class="mb-4">Back to Games</button>
-        <!-- Game content here -->
-    </div>
-
-    <!-- Word Scramble Game Page -->
-    <div id="wordScramble" class="hidden">
-        <!-- Content for Word Scramble Game -->
-        <button onclick="navigateTo('mainPage')" class="mb-4">Back to Games</button>
-        <!-- Game content here -->
-    </div>
-
-    <script>
-        function navigateTo(pageId) {
-            document.getElementById('mainPage').classList.add('hidden');
-            document.getElementById('emojiGame').classList.add('hidden');
-            document.getElementById('wordScramble').classList.add('hidden');
-            document.getElementById(pageId).classList.remove('hidden');
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">  
+    <style>
+        body {
+            font-family: 'Single Day', sans-serif;
+            font-size: 40px; /* Increase base font size */
         }
-    </script>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        #emojiSequence {
+            animation: float 3s ease-in-out infinite;
+        }
+        #emojiHint, #result {
+            font-weight: normal;
+        }
+        #wordGuess {
+            font-weight: normal;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #guessButton {
+            background-color: #FFD139;
+            color: #fff;
+            border: none; /* Remove default border */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: transform 0.3s ease; /* Smooth transformation */
+            width: 100%; /* Full width */
+            padding: 15px; /* Padding for size */
+            font-size: 1.2rem; /* Adjust font size */
+            cursor: pointer; /* Cursor pointer */
+        }
+        #guessButton:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow */
+        }
+        #guessButton:active {
+            transform: scale(0.95); /* Slightly shrink when clicked */
+        }
+    </style>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen">
+    <div class="text-center">
+        <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
+        <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
+        <input id="wordGuess" type="text" class="text-xl p-4 rounded-lg w-full mb-4 text-center" placeholder="Type the word">
+        <button id="guessButton" class="rounded-lg">Let's Guess</button>
+        <div id="result" class="mt-8 text-2xl font-semibold"></div>
+    </div>
+    <script src="game.js"></script>
 </body>
 </html>
