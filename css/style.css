@@ -1,0 +1,74 @@
+body {
+    font-family: 'Single Day', sans-serif;
+    font-size: 40px; /* Consider if you want this large font affecting all body text */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+#emojiSequence {
+    animation: float 3s ease-in-out infinite;
+    font-size: 10rem; /* Enlarge emojis */
+    text-align: center; /* Center emojis */
+    margin-top: 40px;
+
+}
+
+#emojiHint, #result {
+    padding: 10px;
+    font-weight: normal;
+    text-align: center; /* Ensure hints and results are centered */
+    margin-bottom: 10px;
+}
+
+#wordGuess {
+    font-weight: normal;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 50%; /* Ensure input takes full width of its container */
+    font-size: 1.5rem; /* Adjust if necessary */
+}
+
+/* Adjusting the 'Let's Guess' button to match 'Download' button style */
+#guessButton {
+    background-color: #343a40; /* Match the dark style of the 'Download' button */
+    color: #fff;
+    border: none;
+    transition: transform 0.3s ease;
+    width: 50%; /* Full width */
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#guessButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#guessButton:active {
+    transform: scale(0.95);
+}
+
+.text-custom-yellow {
+    color: #FFD139;
+}
+
+.bg-gradient {
+    background-color: #FFD139 !important;
+}
+
+.code-window {
+    border-radius: .5rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 1 8px 24px 2 #000000; 
+    max-height: 700px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    margin-top: 100px; /* Adjust the value as needed */
+}

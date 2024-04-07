@@ -1,30 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Breaker Games - Quick Icebreaker Games for Meeting</title>
-    <meta name="description" content="Breaker Games offers innovative, quick-play icebreaker games designed to energize and engage teams before meetings. Perfect for remote or in-person setups, our diverse range of games fosters teamwork, stimulates creativity, and breaks down barriers in just minutes. Ideal for busy professionals, Breaker Games turns every meeting into an opportunity for team bonding and fun. Discover how our easy-to-implement games can transform your meeting dynamics and boost productivity.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Breaker Games brings you cool, quick icebreaker games that zap some energy into your team before meetings. Whether you're teaming up online or face-to-face, our games are all about getting folks to work together, spark new ideas, and get over any awkwardness in no time. They're a hit with anyone who's got a packed schedule but still wants to make every meeting a chance to have fun and bond with the team. Check out how our simple games can shake up your meetings and get those productivity vibes flowing.">
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white">
-    <div class="text-center pt-8 lg:pt-12">
-        <h1 class="text-5xl lg:text-8xl text-custom-yellow">Breaker Games</h1>
-        <p class="text-xl lg:text-3xl text-black">Break the ice!</p>
+<body>
+
+<!--Header Section-->
+<section class="bg-gradient pt-5 pb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+                <div class="heading-brand ">Breaker Games</div>
+            <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="a4sr3s" data-color="#FF5F5F" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+            </div>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-8 mx-auto text-center">
+                <h1>Quick Icebreaker Games for Meeting</h1>
+                <p class="lead mb-5">Breaker Games offers innovative, quick-play icebreaker games designed to energize and engage teams before meetings. Perfect for remote or in-person setups, our diverse range of games fosters teamwork, stimulates creativity, and breaks down barriers in just minutes. </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-9 mx-auto">
+                <div class="code-window min-height: 50vh;">
+                    <div class="flex items-center justify-center" style="min-height: calc(80vh - 7rem);">
+                    <div class="text-center">
+                        <div id="emojiSequence" class="3rem">🌞🌻</div>
+                        <div id="emojiHint" class="3rem font-bold ">Hint: A type of flower</div>
+                        <input id="wordGuess" type="text" class="text-xl p-4 rounded-lg w-full mb-4 text-center" placeholder="Type the word">
+                        <button id="guessButton" class="btn btn-success svg-icon">Let's Guess</button>
+                        <div id="result" class="text-2xl font-semibold"></div>
+                    </div>
+                    <script src="js/game.js"></script>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="flex items-center justify-center" style="min-height: calc(80vh - 4rem);">
-    <div class="text-center">
-        <div id="emojiSequence" class="text-9xl mb-8">🌞🌻</div>
-        <div id="emojiHint" class="text-2xl font-bold mb-8">Hint: A type of flower</div>
-        <input id="wordGuess" type="text" class="text-xl p-4 rounded-lg w-full mb-4 text-center" placeholder="Type the word">
-        <button id="guessButton" class="rounded-lg">Let's Guess</button>
-        <div id="result" class="mt-8 text-2xl font-semibold"></div>
+</section>
+
+<!--footer-->
+<footer class="py-5 bg-light">
+    <div class="container">
+        <div class="row my-2">
+            <div class="col-md-4 mx-auto text-muted text-center small-xl">
+                Breaker Games
+            </div>
+        </div>
     </div>
-    <script src="game.js"></script>
-</body>
-</html>
+</footer>
