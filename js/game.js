@@ -42,6 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
             result.textContent = "Correct! 😀";
             result.classList.remove('text-red-500');
             result.classList.add('text-green-500');
+    
+            // Trigger confetti explosion
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+    
             setTimeout(() => {
                 setRandomEmojiSequence(); // Display the next emoji sequence
                 result.textContent = ''; // Optionally clear the result message
